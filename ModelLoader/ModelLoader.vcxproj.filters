@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{34e0019b-1a05-4e62-9e6f-f61cb2e994b8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SysOpenGLInit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SysOpenGLSetting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MngrShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraFreeLook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LdrStbiWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OGLGenTexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SysOpenGLInit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SysOpenGLSetting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MngrShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraFreeLook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LdrStbiWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OGLGenTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\flat_terrain.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\flat_terrain.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\light.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\light.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\normals.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\normals.geo">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\normals.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\skybox.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\skybox.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\terrain.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\terrain.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\terrain_diffuse.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\terrain_diffuse.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\text.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\text.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\basic.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\basic.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\model_diffuse.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\model_diffuse.frag">
+      <Filter>shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
