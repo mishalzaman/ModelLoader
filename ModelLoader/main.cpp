@@ -30,6 +30,7 @@ int main(int argc, char* args[]) {
 	glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)SCREEN_WIDTH / (float)SCREEN_HEIGHT, 0.1f, 100.0f);
 	glm::mat4 view = camera.getViewMatrix();
 
+
 	silentHillRoom.loadModel("assets/hospitalroom/hp194.obj");
 
 	double dt = 1.0f / 60.0; 
