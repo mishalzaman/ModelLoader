@@ -1,6 +1,7 @@
 
 #include <SDL2/SDL.h>
 #include <GL/glew.h>
+#include <bullet/btBulletCollisionCommon.h>
 #include <iostream>
 
 #include "SysOpenGLInit.h"
@@ -22,7 +23,8 @@ int main(int argc, char* args[]) {
 	if (unsigned int e = SystemOpenGLInit::defaults(window, context, SCREEN_WIDTH, SCREEN_HEIGHT, 3, 3) > 0) return e;
 	SysOpenGLSetting::defaults(window, SCREEN_WIDTH, SCREEN_HEIGHT);
 
-	ModelLoader silentHillRoom = ModelLoader();
+	ModelLoader box = ModelLoader(glm::vec3(0, 0,0));
+	ModelLoader plane = ModelLoader(glm::vec3(0, -1.75f, 0));
 	Input input = Input();
 	CameraFreeLook camera = CameraFreeLook(SCREEN_WIDTH, SCREEN_HEIGHT);
 	Shader modelShader = Shader("shaders/model_diffuse.vert", "shaders/model_diffuse.frag");
@@ -31,9 +33,14 @@ int main(int argc, char* args[]) {
 	glm::mat4 view = camera.getViewMatrix();
 
 
-	silentHillRoom.loadModel("assets/hospitalroom/hp194.obj");
+	box.loadModel("assets/box/box.obj");
+	plane.loadModel("assets/plane/plane.obj");
 
 	double dt = 1.0f / 60.0; 
+
+
+	// Bullet
+	btDefaultCollisionConfiguration* collisionConfiguration = new btDefaultCollisionConfiguration();
 
 	while (!quit) {
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -60,7 +67,8 @@ int main(int argc, char* args[]) {
 		view = camera.getViewMatrix();
 
 		// draw
-		silentHillRoom.draw(projection, view, modelShader);
+		box.draw(projection, view, modelShader);
+		plane.draw(projection, view, modelShader);
 		 
 		SDL_GL_SwapWindow(window);
 	}

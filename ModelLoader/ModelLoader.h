@@ -18,12 +18,12 @@
 class ModelLoader
 {
 	public:
-		ModelLoader();
+		ModelLoader(glm::vec3 position);
 		~ModelLoader();
 		void loadModel(std::string filename);
 		void draw(glm::mat4 &projection, glm::mat4 &view, Shader &shader);
 	private:
-		glm::mat4 model;
+		glm::vec3 position;
 		std::vector<Mesh> meshes;
 		std::string directory;
 		std::vector<Texture> texturesLoaded;

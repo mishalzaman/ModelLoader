@@ -1,10 +1,8 @@
 #include "ModelLoader.h"
 
-ModelLoader::ModelLoader()
+ModelLoader::ModelLoader(glm::vec3 position)
 {
-    this->model = glm::mat4();
-    model = glm::translate(model, glm::vec3(0, 0, 0));
-    model = glm::scale(model, glm::vec3(1, 1, 1));
+    this->position = position;
 }
 
 ModelLoader::~ModelLoader()
@@ -31,12 +29,13 @@ void ModelLoader::draw(glm::mat4& projection, glm::mat4& view, Shader &shader)
     shader.use();
 
     glm::mat4 model = glm::mat4(1.0f);
-    model = glm::translate(model, glm::vec3(0.0f, -1.75f, 0.0f)); // translate it down so it's at the center of the scene
+    model = glm::translate(model, position); // translate it down so it's at the center of the scene
     model = glm::scale(model, glm::vec3(1, 1, 1));	// it's a bit too big for our scene, so scale it down
 
     shader.setMat4("projection", projection);
     shader.setMat4("view", view);
     shader.setMat4("model", model);
+
 
     for (unsigned int i = 0; i < meshes.size(); i++) {
         unsigned int diffuseNr = 1;
