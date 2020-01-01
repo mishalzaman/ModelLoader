@@ -11,7 +11,7 @@ uniform sampler2D diffuseTexture;
 uniform vec3 lightPos;
 
 // properties
-float lightAmbienceStrength = 0.2;
+float lightAmbienceStrength = 0.4;
 vec3 lightDiffuseStrength = vec3(0.1,0.1,0.1);
 
 void main() {
