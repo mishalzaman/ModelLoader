@@ -125,21 +125,23 @@ int main(int argc, char* args[]) {
 		window_flags |= ImGuiWindowFlags_NoResize;
 		window_flags |= ImGuiWindowFlags_NoCollapse;
 
+		ImGui::SetNextWindowContentSize(ImVec2(300, 900));
+		ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(5, 5));
 		ImGui::Begin("Information", NULL, window_flags);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
 		ImGui::SetWindowPos(ImVec2(0, 0), true);
-		ImGui::SetNextWindowSize(ImVec2(200, SCREEN_HEIGHT), 0);
 		ImGui::Text("Average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 		ImGui::Separator();
 		ImGui::Text("Camera");
 		ImGui::Text("Position %.3f, %.3f, %.3f", camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
 		ImGui::Text("Yaw %.3f", camera.yaw);
 		ImGui::Text("Pitch %.3f", camera.pitch);
+		ImGui::Separator();
+		light.gui();
+		ImGui::PopStyleVar();
 
 		ImGui::End();
 
 		light.gui();
-
-		ImGui::ShowDemoWindow();
 
 		ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
