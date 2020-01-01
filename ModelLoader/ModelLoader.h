@@ -14,6 +14,7 @@
 #include "MngrShader.h"
 #include "OGLGenTexture.h"
 #include "Shader.h"
+#include "STModel.h"
 
 class ModelLoader
 {
@@ -21,9 +22,8 @@ class ModelLoader
 		ModelLoader();
 		~ModelLoader();
 		void loadModel(std::string filename);
-		void draw(glm::mat4 &projection, glm::mat4 &view, Shader &shader);
+		void draw(glm::mat4 &projection, glm::mat4 &view, Shader &shader, STModel &structModel, glm::vec3 lightPos);
 	private:
-		glm::mat4 model;
 		std::vector<Mesh> meshes;
 		std::string directory;
 		std::vector<Texture> texturesLoaded;
