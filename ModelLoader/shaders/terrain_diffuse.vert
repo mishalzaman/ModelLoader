@@ -13,7 +13,7 @@ out VS_OUT {
 } vs_out;
 
 uniform mat4 projection; 
-uniform mat4 view; 
+uniform mat4 view;
 uniform mat4 model;
 uniform vec3 viewPos;
 uniform vec3 lightPos;

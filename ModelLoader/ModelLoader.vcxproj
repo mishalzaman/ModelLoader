@@ -144,12 +144,16 @@
     <ClCompile Include="CameraFreeLook.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="LdrStbiWrapper.cpp" />
+    <ClCompile Include="Light.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="MngrShader.cpp" />
     <ClCompile Include="ModelLoader.cpp" />
     <ClCompile Include="OGLGenTexture.cpp" />
+    <ClCompile Include="OGLGenVertexAttrbitutes.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Sphere.cpp" />
+    <ClCompile Include="STVertex.h" />
     <ClCompile Include="SysOpenGLInit.cpp" />
     <ClCompile Include="SysOpenGLSetting.cpp" />
   </ItemGroup>
@@ -157,12 +161,16 @@
     <ClInclude Include="CameraFreeLook.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="LdrStbiWrapper.h" />
+    <ClInclude Include="Light.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="MngrShader.h" />
     <ClInclude Include="ModelLoader.h" />
     <ClInclude Include="OGLGenTexture.h" />
+    <ClInclude Include="OGLGenVertexAttrbitutes.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="Sphere.h" />
     <ClInclude Include="stb_image.h" />
+    <ClInclude Include="STModel.h" />
     <ClInclude Include="SysOpenGLInit.h" />
     <ClInclude Include="SysOpenGLSetting.h" />
   </ItemGroup>
@@ -175,6 +183,8 @@
     <None Include="shaders\light.vert" />
     <None Include="shaders\model_diffuse.vert" />
     <None Include="shaders\model_diffuse.frag" />
+    <None Include="shaders\model_diffuse_lighting.frag" />
+    <None Include="shaders\model_diffuse_lighting.vert" />
     <None Include="shaders\normals.frag" />
     <None Include="shaders\normals.geo" />
     <None Include="shaders\normals.vert" />

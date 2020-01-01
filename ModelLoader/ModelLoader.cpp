@@ -1,8 +1,7 @@
 #include "ModelLoader.h"
 
-ModelLoader::ModelLoader(glm::vec3 position)
+ModelLoader::ModelLoader()
 {
-    this->position = position;
 }
 
 ModelLoader::~ModelLoader()
@@ -24,17 +23,18 @@ void ModelLoader::loadModel(std::string filename)
     }
 }
 
-void ModelLoader::draw(glm::mat4& projection, glm::mat4& view, Shader &shader)
+void ModelLoader::draw(glm::mat4& projection, glm::mat4& view, Shader& shader, STModel& structModel, glm::vec3 lightPos)
 {
     shader.use();
 
     glm::mat4 model = glm::mat4(1.0f);
-    model = glm::translate(model, position); // translate it down so it's at the center of the scene
-    model = glm::scale(model, glm::vec3(1, 1, 1));	// it's a bit too big for our scene, so scale it down
+    model = glm::translate(model, structModel.position); // translate it down so it's at the center of the scene
+    model = glm::scale(model, structModel.scale);	// it's a bit too big for our scene, so scale it down
 
     shader.setMat4("projection", projection);
     shader.setMat4("view", view);
     shader.setMat4("model", model);
+    shader.setVec3("lightPos", lightPos);
 
 
     for (unsigned int i = 0; i < meshes.size(); i++) {

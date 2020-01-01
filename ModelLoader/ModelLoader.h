@@ -14,16 +14,16 @@
 #include "MngrShader.h"
 #include "OGLGenTexture.h"
 #include "Shader.h"
+#include "STModel.h"
 
 class ModelLoader
 {
 	public:
-		ModelLoader(glm::vec3 position);
+		ModelLoader();
 		~ModelLoader();
 		void loadModel(std::string filename);
-		void draw(glm::mat4 &projection, glm::mat4 &view, Shader &shader);
+		void draw(glm::mat4 &projection, glm::mat4 &view, Shader &shader, STModel &structModel, glm::vec3 lightPos);
 	private:
-		glm::vec3 position;
 		std::vector<Mesh> meshes;
 		std::string directory;
 		std::vector<Texture> texturesLoaded;

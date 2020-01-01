@@ -51,6 +51,18 @@
     <ClCompile Include="Shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OGLGenVertexAttrbitutes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="STVertex.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SysOpenGLInit.h">
@@ -84,6 +96,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OGLGenVertexAttrbitutes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STModel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -143,6 +167,12 @@
       <Filter>shaders</Filter>
     </None>
     <None Include="shaders\model_diffuse.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\model_diffuse_lighting.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\model_diffuse_lighting.vert">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>
